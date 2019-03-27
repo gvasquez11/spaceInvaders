@@ -1,6 +1,9 @@
 import pygame
 import math
 from pygame.sprite import Sprite
+import os
+folder = os.path.dirname(os.path.abspath(__file__))
+file = os.path.join(folder, 'images/')
 
 
 class Ship(Sprite):
@@ -13,16 +16,14 @@ class Ship(Sprite):
 
         # Load the alien image, and set its rect attribute.
         self.images = []
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-2.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-3.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-4.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-5.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-6.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-7.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Ship_Crash-8.png.png'))
-
-
+        self.images.append(pygame.image.load('images/Ship_Crash-1.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-2.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-3.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-4.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-5.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-6.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-7.png'))
+        self.images.append(pygame.image.load('images/Ship_Crash-8.png'))
 
         self.index = 0
         self.image = self.images[self.index]
@@ -70,3 +71,4 @@ class Ship(Sprite):
     def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
+

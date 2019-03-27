@@ -27,7 +27,7 @@ class Start:
         self.inv_btn.centery = screen.get_rect().centery - 200
 
         #  png that displays the alien with the pts system
-        self.score = pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/menu.png')
+        self.score = pygame.image.load('images/menu.png')
         self.score_btn = self.score.get_rect()
         self.score_btn.centerx = screen.get_rect().centerx
         self.score_btn.centery = screen.get_rect().centery + 30

@@ -16,7 +16,7 @@ class GameStats:
         self.game_pause = False
 
         # Open high score txt
-        self.wr = open('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/venv/lib/high_score.txt', 'r+')
+        self.wr = open('high_score.txt', 'r+')
         self.current = int(self.wr.read())
         self.ships_left = self.ai_settings.ship_limit
         self.score = 0

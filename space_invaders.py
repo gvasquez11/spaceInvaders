@@ -9,7 +9,11 @@ from ship import Ship
 import game_functions as gf
 from startup import Start
 from alien import UFO
-from os import path
+import os
+
+#folder = os.path.dirname(__file__)
+# filename = os.path.join(folder, '/images')
+
 
 
 def run_game():

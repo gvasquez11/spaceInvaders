@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bunker(Sprite):
     def __init__(self, ai_settings, screen):
         """Initialize and set its starting position."""
@@ -9,7 +10,7 @@ class Bunker(Sprite):
         self.ai_settings = ai_settings
 
         # Load the ship image, and get its rect.
-        self.image = pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/buncker.png')
+        self.image = pygame.image.load('images/buncker.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

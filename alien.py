@@ -14,10 +14,13 @@ class Alien1(Sprite):
 
         # Load the alien image, and set its rect attribute.
         self.images = []
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien1-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien1-2.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-2.png.png'))
+
+        self.images.append(pygame.image.load('images/alien1-1.png'))
+        self.images.append(pygame.image.load('images/alien1-2.png'))
+        self.images.append(pygame.image.load('images/Explosion1-1.png'))
+        self.images.append(pygame.image.load('images/Explosion1-2.png'))
+
+
 
         self.index = 0
         self.image = self.images[self.index]
@@ -73,10 +76,10 @@ class Alien2(Sprite):
 
         # Load the alien image, and set its rect attribute.
         self.images = []
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien2-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien2-2.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-2.png.png'))
+        self.images.append(pygame.image.load('images/alien2-1.png'))
+        self.images.append(pygame.image.load('images/alien2-2.png'))
+        self.images.append(pygame.image.load('images/Explosion1-1.png'))
+        self.images.append(pygame.image.load('images/Explosion1-2.png'))
 
         self.index = 0
         self.image = self.images[self.index]
@@ -133,10 +136,10 @@ class Alien3(Sprite):
 
         # Load the alien image, and set its rect attribute.
         self.images = []
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien3-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/alien3-2.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-1.png.png'))
-        self.images.append(pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/Explosion1-2.png.png'))
+        self.images.append(pygame.image.load('images/alien3-1.png'))
+        self.images.append(pygame.image.load('images/alien3-2.png'))
+        self.images.append(pygame.image.load('images/Explosion1-1.png'))
+        self.images.append(pygame.image.load('images/Explosion1-2.png'))
 
         self.index = 0
         self.image = self.images[self.index]
@@ -193,7 +196,7 @@ class UFO(Sprite):
 
 
         # Load the ship image, and get its rect.
-        self.image = pygame.image.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/images/enemy_ship.png')
+        self.image = pygame.image.load('images/enemy_ship.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

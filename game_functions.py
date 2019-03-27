@@ -55,7 +55,7 @@ def check_play_button(ai_settings, screen, stats, sb, play_button, ship, aliens,
     button_clicked = play_button.rect.collidepoint(mouse_x, mouse_y)
     if button_clicked and not stats.game_active:
         pygame.mixer.init()
-        pygame.mixer.music.load('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/spaceinvaders1.mpeg')
+        pygame.mixer.music.load('sound/spaceinvaders1.mpeg')
         pygame.mixer.music.play(-1)
         # Reset the game settings.
         ai_settings.initialize_dynamic_settings()
@@ -93,7 +93,7 @@ def fire_bullet(ai_settings, screen, ship, bullets, stats):
         if len(bullets) < ai_settings.bullets_allowed:
             new_bullet = Bullet(ai_settings, screen, ship)
             bullets.add(new_bullet)
-            shoot = pygame.mixer.Sound('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/shoot.wav')
+            shoot = pygame.mixer.Sound('sound/shoot.wav')
             shoot.play()
 
 
@@ -110,7 +110,7 @@ def fire_alien_bullet(ai_settings, screen, aliens, alien_bullets):
         ai_settings.timer += .1
         if ai_settings.timer > 5:
             alien_bullets.add(new_alien_bullet)
-            shoot = pygame.mixer.Sound('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/shoot.wav')
+            shoot = pygame.mixer.Sound('sound/shoot.wav')
             shoot.play()
             ai_settings.timer = 0
 
@@ -218,7 +218,7 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb, aliens, bullet
     if pygame.sprite.spritecollideany(ufos, bullets):
         pygame.sprite.spritecollideany(ufos, bullets).kill()
         ufos.boom = True
-        ex = pygame.mixer.Sound('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/shoot.wav')
+        ex = pygame.mixer.Sound('sound/shoot.wav')
         ex.play()
 
     # Remove any bullets and aliens that have collided.
@@ -228,7 +228,7 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb, aliens, bullet
         for aliens in collisions.values():
             for a in aliens:
                 a.boom = True
-                inv = pygame.mixer.Sound('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/invaderkilled.wav')
+                inv = pygame.mixer.Sound('sound/invaderkilled.wav')
                 inv.play()
                 stats.score += a.score * len(aliens)
                 sb.prep_score()
@@ -302,7 +302,7 @@ def update_aliens(ai_settings, screen, stats, sb, ship, aliens, alien_bullets):
         ship_hit(stats, sb)
         stats.game_pause = False
         ship.boom = True
-        ex = pygame.mixer.Sound('/Users/gregoryvasquez/PycharmProjects/spaceInvaders/sound/explosion.wav')
+        ex = pygame.mixer.Sound('sound/explosion.wav')
         ex.play()
 
     # Look for aliens hitting the bottom of the screen.
